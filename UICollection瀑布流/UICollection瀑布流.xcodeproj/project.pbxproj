@@ -8,25 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		2473E24C1BE89ACD0097FB34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E24B1BE89ACD0097FB34 /* main.m */; };
-		2473E24F1BE89ACD0097FB34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E24E1BE89ACD0097FB34 /* AppDelegate.m */; };
-		2473E2521BE89ACD0097FB34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E2511BE89ACD0097FB34 /* ViewController.m */; };
 		2473E2551BE89ACD0097FB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2473E2531BE89ACD0097FB34 /* Main.storyboard */; };
 		2473E2571BE89ACD0097FB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2473E2561BE89ACD0097FB34 /* Assets.xcassets */; };
 		2473E25A1BE89ACD0097FB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2473E2581BE89ACD0097FB34 /* LaunchScreen.storyboard */; };
+		24D054691BE9A62400833DA5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D054671BE9A62400833DA5 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		24D0546D1BE9A62F00833DA5 /* TSZCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D0546C1BE9A62F00833DA5 /* TSZCollectionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		24D054701BE9AEB500833DA5 /* TSZWaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D0546F1BE9AEB500833DA5 /* TSZWaterFallLayout.m */; settings = {ASSET_TAGS = (); }; };
 		C0FBECBC5C963FA4770E27CD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E0956469D1D41A3735D9C1C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2473E2471BE89ACD0097FB34 /* UICollection瀑布流.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UICollection瀑布流.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2473E24B1BE89ACD0097FB34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2473E24D1BE89ACD0097FB34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2473E24E1BE89ACD0097FB34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2473E2501BE89ACD0097FB34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2473E2511BE89ACD0097FB34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2473E2541BE89ACD0097FB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2473E2561BE89ACD0097FB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2473E2591BE89ACD0097FB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2473E25B1BE89ACD0097FB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24D054661BE9A62400833DA5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		24D054671BE9A62400833DA5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		24D0546B1BE9A62F00833DA5 /* TSZCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZCollectionViewController.h; sourceTree = "<group>"; };
+		24D0546C1BE9A62F00833DA5 /* TSZCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZCollectionViewController.m; sourceTree = "<group>"; };
+		24D0546E1BE9AEB500833DA5 /* TSZWaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZWaterFallLayout.h; sourceTree = "<group>"; };
+		24D0546F1BE9AEB500833DA5 /* TSZWaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZWaterFallLayout.m; sourceTree = "<group>"; };
 		4E0956469D1D41A3735D9C1C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7277AF95B83B209C0407A76 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BECC89C9661E7B401F9AC83B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,10 +77,10 @@
 		2473E2491BE89ACD0097FB34 /* UICollection瀑布流 */ = {
 			isa = PBXGroup;
 			children = (
-				2473E24D1BE89ACD0097FB34 /* AppDelegate.h */,
-				2473E24E1BE89ACD0097FB34 /* AppDelegate.m */,
-				2473E2501BE89ACD0097FB34 /* ViewController.h */,
-				2473E2511BE89ACD0097FB34 /* ViewController.m */,
+				24D0546A1BE9A62F00833DA5 /* Controller */,
+				24D054641BE9A62400833DA5 /* Model */,
+				24D054651BE9A62400833DA5 /* Other */,
+				24D054681BE9A62400833DA5 /* View */,
 				2473E2531BE89ACD0097FB34 /* Main.storyboard */,
 				2473E2561BE89ACD0097FB34 /* Assets.xcassets */,
 				2473E2581BE89ACD0097FB34 /* LaunchScreen.storyboard */,
@@ -93,6 +96,40 @@
 				2473E24B1BE89ACD0097FB34 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24D054641BE9A62400833DA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24D054651BE9A62400833DA5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				24D054661BE9A62400833DA5 /* AppDelegate.h */,
+				24D054671BE9A62400833DA5 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24D054681BE9A62400833DA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24D0546E1BE9AEB500833DA5 /* TSZWaterFallLayout.h */,
+				24D0546F1BE9AEB500833DA5 /* TSZWaterFallLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24D0546A1BE9A62F00833DA5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24D0546B1BE9A62F00833DA5 /* TSZCollectionViewController.h */,
+				24D0546C1BE9A62F00833DA5 /* TSZCollectionViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A7AF4D96365B2878EF80D67C /* Frameworks */ = {
@@ -208,9 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2473E2521BE89ACD0097FB34 /* ViewController.m in Sources */,
-				2473E24F1BE89ACD0097FB34 /* AppDelegate.m in Sources */,
+				24D054701BE9AEB500833DA5 /* TSZWaterFallLayout.m in Sources */,
+				24D054691BE9A62400833DA5 /* AppDelegate.m in Sources */,
 				2473E24C1BE89ACD0097FB34 /* main.m in Sources */,
+				24D0546D1BE9A62F00833DA5 /* TSZCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
