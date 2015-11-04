@@ -28,7 +28,7 @@ static NSString * const ID = @"Cell";
 
 #pragma mark: 实现collection的 数据源方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return  20;
+    return  200;
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
