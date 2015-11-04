@@ -26,6 +26,13 @@ static const NSUInteger TSZDefaultColumnCount = 3;
 // 存放所有cell的布局属性
 @property (nonatomic, strong) NSMutableArray *attrsArray;
 
+//声明get方法 ， 把数据声明出来
+- (CGFloat)rowSpacing;
+- (CGFloat)columnSpacing;
+- (UIEdgeInsets)edgeInsets;
+- (NSUInteger)columnCount;
+
+
 @end
 
 
@@ -146,6 +153,37 @@ static const NSUInteger TSZDefaultColumnCount = 3;
     self.columnMaxYArray[destColumnIndex] = @(CGRectGetMaxY(attrs.frame));
     
     return attrs;
+}
+
+
+#pragma mark 处理数据
+- (CGFloat)rowSpacing{
+    if ([self.delegate respondsToSelector:@selector(rowSpacingInWaterfallFlowLayout:)]) {
+        return [self.delegate rowSpacingInWaterfallFlowLayout:self];
+    }
+    return TSZDefaultRowSpacing;
+}
+
+- (CGFloat)columnSpacing{
+    if([self.delegate respondsToSelector:@selector(columnSpacingInWaterfallFlowLayout:)]){
+        
+        return [self.delegate columnSpacingInWaterfallFlowLayout:self];
+    }
+    return TSZDefaultColumnSpacing;
+}
+
+- (UIEdgeInsets)edgeInsets{
+    if ([self.delegate respondsToSelector:@selector(edgeInsetsInWaterfallFlowLayout:)]) {
+        return [self.delegate edgeInsetsInWaterfallFlowLayout:self];
+    }
+    return TSZDefaultEdgeInsets;
+}
+
+- (NSUInteger)columnCount{
+    if ([self.delegate respondsToSelector:@selector(columnCountInWaterfallFlowLayout:)]) {
+        return [self.delegate columnCountInWaterfallFlowLayout:self];
+    }
+    return TSZDefaultColumnCount;
 }
 
 @end

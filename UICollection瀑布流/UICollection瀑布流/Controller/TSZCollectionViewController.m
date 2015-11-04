@@ -10,7 +10,7 @@
 #import "TSZClothes.h"
 #import "TSZClothesCell.h"
 #import <MJExtension.h>
-@interface TSZCollectionViewController ()
+@interface TSZCollectionViewController () <TSZWaterFallLayoutDelegate>
 
 @property (nonatomic ,strong)NSMutableArray *clothesArray;
 @end
@@ -32,7 +32,10 @@ static NSString * const ID = @"Cell";
     [super viewDidLoad];
     
     //切换布局
-    self.collectionView.collectionViewLayout = [[TSZWaterFallLayout alloc]init];
+    
+    TSZWaterFallLayout *layout = [[TSZWaterFallLayout alloc]init];
+    layout.delegate = self;
+    self.collectionView.collectionViewLayout = layout;
     
     //发送请求给服务器
     NSArray *tempArray = [TSZClothes objectArrayWithFilename:@"clothes.plist"];
@@ -53,5 +56,21 @@ static NSString * const ID = @"Cell";
 //    cell.backgroundColor = [UIColor redColor];
     return  cell;
 }
+
+#pragma mark :TSZWaterFallLayoutDelegate协议的实现
+
+- (CGFloat)waterfallFlowLayout:(TSZWaterFallLayout *)layout heightForItemAtIndexPath:(NSIndexPath *)indexPath withItemWidth:(CGFloat)width{
+    TSZClothes *clothes = self.clothesArray[indexPath.item];
+    
+    return clothes.h *width / clothes.w;
+}
+
+- (NSUInteger)columnCountInWaterfallFlowLayout:(TSZWaterFallLayout *)layout{
+    return  4;
+}
+
+
+
+
 
 @end
