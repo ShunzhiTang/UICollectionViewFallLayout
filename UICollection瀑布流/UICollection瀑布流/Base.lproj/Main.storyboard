@@ -12,20 +12,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rWR-B2-qyI">
-                            <size key="itemSize" width="92" height="93"/>
+                            <size key="itemSize" width="193" height="198"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="G1S-04-ZzY">
-                                <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="G1S-04-ZzY" customClass="TSZClothesCell">
+                                <rect key="frame" x="0.0" y="0.0" width="193" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="92" height="93"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="193" height="198"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-4i-43E">
+                                            <rect key="frame" x="0.0" y="0.0" width="193" height="177"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqn-Sf-SXF">
+                                            <rect key="frame" x="0.0" y="177" width="193" height="21"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="qee-RN-AoH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="w8W-4i-43E" firstAttribute="leading" secondItem="G1S-04-ZzY" secondAttribute="leading" id="Ag1-Ne-hi3"/>
+                                    <constraint firstAttribute="bottom" secondItem="wqn-Sf-SXF" secondAttribute="bottom" id="AkM-5r-ZCD"/>
+                                    <constraint firstAttribute="trailing" secondItem="w8W-4i-43E" secondAttribute="trailing" id="KKD-CR-Vr1"/>
+                                    <constraint firstAttribute="trailing" secondItem="wqn-Sf-SXF" secondAttribute="trailing" id="P25-Ev-Z5s"/>
+                                    <constraint firstItem="w8W-4i-43E" firstAttribute="top" secondItem="G1S-04-ZzY" secondAttribute="top" id="Rfy-ty-Mw4"/>
+                                    <constraint firstItem="wqn-Sf-SXF" firstAttribute="leading" secondItem="G1S-04-ZzY" secondAttribute="leading" id="SrD-v8-fjj"/>
+                                    <constraint firstItem="wqn-Sf-SXF" firstAttribute="top" secondItem="w8W-4i-43E" secondAttribute="bottom" id="j32-xe-qdD"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="iconImage" destination="w8W-4i-43E" id="pC9-rc-P89"/>
+                                    <outlet property="priceLabel" destination="wqn-Sf-SXF" id="NfN-jK-IYA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

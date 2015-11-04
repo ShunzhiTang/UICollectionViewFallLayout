@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24672D8A1BE9DB6D00B3DC0E /* TSZClothesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 24672D891BE9DB6D00B3DC0E /* TSZClothesCell.m */; settings = {ASSET_TAGS = (); }; };
+		24672D8D1BE9DB9000B3DC0E /* TSZClothes.m in Sources */ = {isa = PBXBuildFile; fileRef = 24672D8C1BE9DB9000B3DC0E /* TSZClothes.m */; settings = {ASSET_TAGS = (); }; };
+		24672D8F1BE9DE3A00B3DC0E /* clothes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 24672D8E1BE9DE3A00B3DC0E /* clothes.plist */; settings = {ASSET_TAGS = (); }; };
 		2473E24C1BE89ACD0097FB34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2473E24B1BE89ACD0097FB34 /* main.m */; };
 		2473E2551BE89ACD0097FB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2473E2531BE89ACD0097FB34 /* Main.storyboard */; };
 		2473E2571BE89ACD0097FB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2473E2561BE89ACD0097FB34 /* Assets.xcassets */; };
@@ -18,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24672D881BE9DB6D00B3DC0E /* TSZClothesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZClothesCell.h; sourceTree = "<group>"; };
+		24672D891BE9DB6D00B3DC0E /* TSZClothesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZClothesCell.m; sourceTree = "<group>"; };
+		24672D8B1BE9DB9000B3DC0E /* TSZClothes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZClothes.h; sourceTree = "<group>"; };
+		24672D8C1BE9DB9000B3DC0E /* TSZClothes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZClothes.m; sourceTree = "<group>"; };
+		24672D8E1BE9DE3A00B3DC0E /* clothes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = clothes.plist; sourceTree = "<group>"; };
 		2473E2471BE89ACD0097FB34 /* UICollection瀑布流.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UICollection瀑布流.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2473E24B1BE89ACD0097FB34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2473E2541BE89ACD0097FB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +101,7 @@
 		2473E24A1BE89ACD0097FB34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				24672D8E1BE9DE3A00B3DC0E /* clothes.plist */,
 				2473E24B1BE89ACD0097FB34 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -101,6 +110,8 @@
 		24D054641BE9A62400833DA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				24672D8B1BE9DB9000B3DC0E /* TSZClothes.h */,
+				24672D8C1BE9DB9000B3DC0E /* TSZClothes.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,6 +130,8 @@
 			children = (
 				24D0546E1BE9AEB500833DA5 /* TSZWaterFallLayout.h */,
 				24D0546F1BE9AEB500833DA5 /* TSZWaterFallLayout.m */,
+				24672D881BE9DB6D00B3DC0E /* TSZClothesCell.h */,
+				24672D891BE9DB6D00B3DC0E /* TSZClothesCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2473E25A1BE89ACD0097FB34 /* LaunchScreen.storyboard in Resources */,
+				24672D8F1BE9DE3A00B3DC0E /* clothes.plist in Resources */,
 				2473E2571BE89ACD0097FB34 /* Assets.xcassets in Resources */,
 				2473E2551BE89ACD0097FB34 /* Main.storyboard in Resources */,
 			);
@@ -247,7 +261,9 @@
 			files = (
 				24D054701BE9AEB500833DA5 /* TSZWaterFallLayout.m in Sources */,
 				24D054691BE9A62400833DA5 /* AppDelegate.m in Sources */,
+				24672D8A1BE9DB6D00B3DC0E /* TSZClothesCell.m in Sources */,
 				2473E24C1BE89ACD0097FB34 /* main.m in Sources */,
+				24672D8D1BE9DB9000B3DC0E /* TSZClothes.m in Sources */,
 				24D0546D1BE9A62F00833DA5 /* TSZCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

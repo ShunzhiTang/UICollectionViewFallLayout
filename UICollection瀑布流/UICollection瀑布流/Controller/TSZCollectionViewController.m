@@ -7,12 +7,22 @@
 
 #import "TSZCollectionViewController.h"
 #import "TSZWaterFallLayout.h"
-
+#import "TSZClothes.h"
+#import "TSZClothesCell.h"
+#import <MJExtension.h>
 @interface TSZCollectionViewController ()
 
+@property (nonatomic ,strong)NSMutableArray *clothesArray;
 @end
 
 @implementation TSZCollectionViewController
+
+-(NSMutableArray *)clothesArray{
+    if (_clothesArray == nil) {
+        _clothesArray = [NSMutableArray array];
+    }
+    return  _clothesArray;
+}
 
 //定义一个 ID
 static NSString * const ID = @"Cell";
@@ -23,19 +33,24 @@ static NSString * const ID = @"Cell";
     
     //切换布局
     self.collectionView.collectionViewLayout = [[TSZWaterFallLayout alloc]init];
-
+    
+    //发送请求给服务器
+    NSArray *tempArray = [TSZClothes objectArrayWithFilename:@"clothes.plist"];
+    
+    [self.clothesArray addObjectsFromArray:tempArray];
 }
 
 #pragma mark: 实现collection的 数据源方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return  200;
+    return  self.clothesArray.count;
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    TSZClothesCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor redColor];
+    cell.clothes = self.clothesArray[indexPath.item];
+//    cell.backgroundColor = [UIColor redColor];
     return  cell;
 }
 
