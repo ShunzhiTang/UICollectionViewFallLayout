@@ -65,7 +65,7 @@ static const NSUInteger TSZDefaultColumnCount = 3;
     [self.columnMaxYArray removeAllObjects];
     
     for (int i = 0  ; i < TSZDefaultColumnCount; i++) {
-        [self.columnMaxYArray addObject:@(0)];
+        [self.columnMaxYArray addObject:@(self.edgeInsets.top)];
     }
     
     //计算所有cell 的 布局属性
@@ -95,14 +95,13 @@ static const NSUInteger TSZDefaultColumnCount = 3;
         }
     }
     
-    return  CGSizeMake(TSZCollectionViewWidth,destColumnMaxY + TSZDefaultEdgeInsets.bottom);
+    return  CGSizeMake(TSZCollectionViewWidth,destColumnMaxY + self.edgeInsets.bottom);
 }
 
 //数组中是所有元素最终显示出来的 布局属性
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect{
     
-    NSLog(@"layoutAttributesForElementsInRect");
     NSMutableArray *array = [NSMutableArray array];
     
     for (int i = 0 ; i < self.attrsArray.count; i++) {
@@ -136,16 +135,18 @@ static const NSUInteger TSZDefaultColumnCount = 3;
         }
     }
     
-    CGFloat totalColumnSpacing = (TSZDefaultColumnCount -1) * TSZDefaultColumnSpacing;
+    CGFloat totalColumnSpacing = (self.columnCount -1) * self.columnSpacing;
     
-    CGFloat width = (TSZCollectionViewWidth - TSZDefaultEdgeInsets.left - TSZDefaultEdgeInsets.right - totalColumnSpacing) / TSZDefaultColumnCount;
+    CGFloat width = (TSZCollectionViewWidth - self.edgeInsets.left - self.edgeInsets.right - totalColumnSpacing) / TSZDefaultColumnCount;
     
-#warning todo 
-    CGFloat height = 50 + arc4random_uniform(150);
+    CGFloat height = [self.delegate waterfallFlowLayout:self heightForItemAtIndexPath:indexPath withItemWidth:width];
     
-    CGFloat x = TSZDefaultEdgeInsets.left + destColumnIndex * (width + TSZDefaultColumnSpacing);
+    CGFloat x = self.edgeInsets.left + destColumnIndex * (width + self.columnSpacing);
     
-    CGFloat y = destColumnMaxY + TSZDefaultRowSpacing;
+    CGFloat y = destColumnMaxY;
+    if (destColumnMaxY != self.edgeInsets.top) {
+        y += self.rowSpacing;
+    }
     
     attrs.frame  = CGRectMake(x, y, width, height);
     
